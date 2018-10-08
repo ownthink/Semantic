@@ -9,6 +9,7 @@
 ```
 https://api.ownthink.com/slu?spoken=厦门明天会不会下雨
 ```
+
 spoken举例：
 ```
 上海的天气
