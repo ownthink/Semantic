@@ -11,16 +11,16 @@ if __name__=='__main__':
 	
 	print('--------------------------')
 	
-	print(slu.cws)#分词
+	print(slu.cws) #分词
 	
-	print(slu.pos)
+	print(slu.pos) #词性标注
 		
-	print(slu.ner)
+	print(slu.ner) #命名实体识别
 	
-	print(slu.domain)
+	print(slu.domain) #领域分类
 	
-	print(slu.intent)
+	print(slu.intent) #意图识别
 	
-	print(slu.slot)
+	print(slu.slot) #槽填充
 	
 	
