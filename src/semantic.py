@@ -1,42 +1,38 @@
 import requests
 
 class Analysis:
-	def __init__(self):
-		url = 'https://api.ownthink.com/slu?spoken=厦门明天会不会下雨'      # 口语理解API
-		sess = requests.get(url) # 请求
-
-		text = sess.text # 获取返回的数据
-		print(text) 
-
-		slu = eval(text) # 转为字典类型
-		print(slu)
-
-		data = slu['data']
+	def __init__(self, text):
+		self.data = None
+		if text=='' or type(text) != str:
+			return None
+		url = 'https://api.ownthink.com/slu?spoken=%s'%text
+		sess = requests.get(url)
+		text = sess.text
+		slu = eval(text)
+		
+		self.data = slu['data']
+		
+	def analysis(self):
 
 		# 中文分词
-		cws = data['词法分析']['中文分词']
-		print(cws)
-
+		self.cws = self.data['词法分析']['中文分词']
+		
 		# 词性标注
-		pos = data['词法分析']['词性标注']
-		print(pos)
-
+		self.pos = self.data['词法分析']['词性标注']
+		
 		# 命名实体识别
-		ner = data['词法分析']['实体识别']
-		print(ner)
-
+		self.ner = self.data['词法分析']['实体识别']
+		
 		# 领域分类
-		domain = data['semantics'][0]['domain']
-		print(domain)
+		self.domain = self.data['semantics'][0]['domain']
 
 		# 槽填充
-		slot = data['semantics'][0]['slot']
-		print(slot)
+		self.slot = self.data['semantics'][0]['slot']
 
 		# 意图识别
-		intent = data['semantics'][0]['intent']
-		print(intent)
+		self.intent = self.data['semantics'][0]['intent']
 
-	def seg(self):
-		pass
-
+		return self.data
+		
+		
+		
