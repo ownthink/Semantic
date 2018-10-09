@@ -8,8 +8,3 @@ spoken举例：
 厦门明天会不会下雨
 姚明真正的身高是多少
 ```
-
-请求方式（口语：spoken）：
-```
-https://api.ownthink.com/slu?spoken=厦门明天会不会下雨
-```
