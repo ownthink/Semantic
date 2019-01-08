@@ -10,7 +10,7 @@
 * 槽填充
 * 意图识别
 
-自然语言处理使用的是个人开源的项目Jiagu：https://github.com/ownthink/Jiagu
+自然语言处理使用的是作者开源的Jiagu项目：https://github.com/ownthink/Jiagu
 
 spoken举例：
 ```
