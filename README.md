@@ -10,6 +10,8 @@
 * 槽填充
 * 意图识别
 
+自然语言处理使用的是个人开源的项目Jiagu：https://github.com/ownthink/Jiagu
+
 spoken举例：
 ```
 上海的天气
